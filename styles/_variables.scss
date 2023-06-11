@@ -1,0 +1,21 @@
+// ---Colors---
+// --Primary--
+
+$tomato: hsl(4, 100%, 67%);
+
+// --Neutral--
+
+$dark-slate-gray: hsl(234, 29%, 20%);
+$charcoal-gray: hsl(235, 18%, 26%);
+$gray: hsl(231, 7%, 60%);
+$white: hsl(0, 0%, 100%);
+
+@mixin gradient1 {
+  background: linear-gradient($tomato, rgba(255, 82, 123, 1));
+}
+
+// ---Typography---
+// --Fonts--
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+$roboto: 'Roboto', sans-serif;

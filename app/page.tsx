@@ -1,22 +1,18 @@
 'use client'
-import React from "react";
-import BenefitCard from "./widgets/BenefitCard/BenefitCard";
-import EmailInput from "./widgets/EmailInput/emailInput";
+import { useState } from 'react';
+import AppStyle from './AppStyle.module.scss'
+import NewsletterForm from "./widgets/NewsletterForm/NewsletterForm";
 
 export default function Home() {
-  const foo = 'place';
-  const [bar, setBar] = React.useState('');
+  const [userEmail, setUserEmail] = useState('');
 
   function handleChange(e: any) {
-    let em : string = e.target.value;
-    setBar(em.toUpperCase());
+    setUserEmail(e.target.value);
   }
 
   return (
-    <>
-      <EmailInput onInputChange={handleChange}></EmailInput>
-      <BenefitCard description="hello"></BenefitCard>
-      {bar}
-    </>
+    <div className={AppStyle.app}>
+      <NewsletterForm userEmail={userEmail} handleEmailChange={handleChange}/>
+    </div>
   );
 }

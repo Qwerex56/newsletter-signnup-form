@@ -1,0 +1,93 @@
+.newsletterForm {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  background-color: $white;
+
+  &__banner {
+    align-self: center;
+  }
+
+  &__app {
+    padding: 2.5rem 1.5rem;
+
+    &__heading {
+      margin-bottom: 1.5rem;
+
+      color: $dark-slate-gray;
+
+      font-size: 2.5rem;
+      font-weight: 700;
+  
+      line-height: 2.5rem;
+    }
+
+    &__offerDescription {
+      margin-bottom: 1.5rem;
+
+      color: $dark-slate-gray;
+
+      font-size: 1rem;
+      font-weight: 400;
+
+      line-height: 1.5rem;
+    }
+
+    &__benefits {
+      display: flex;
+      flex-direction: column;
+
+      gap: .625rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &__inputs {
+      display: flex;
+      flex-direction: column;
+
+      gap: 1.5rem;
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    max-width: 425px;
+    border-radius: 2.25rem;
+
+    height: auto;
+
+    &__banner {
+      margin-top: 1.5625rem;
+      border-radius: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row-reverse;
+    align-items: center;
+    width: fit-content;
+
+    max-width: none;
+
+    &__banner {
+      margin-top: 0;
+      padding: 1.5rem;
+      padding-left: 0;
+    }
+
+    &__app {
+      max-width: 31.5rem;
+
+      padding: 0rem 4rem;
+      
+      &__heading {
+        font-size: 3.5rem;
+        
+        line-height: 3.5rem;
+      }
+    }
+  }
+}
