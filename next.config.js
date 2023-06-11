@@ -5,6 +5,13 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
     prependData: `@use '@/styles/variables' as *;`
+  },
+  async redirects() {
+    return [{
+      source: '/',
+      destination: '/pages/NewsletterSignUp',
+      permanent: true
+    }]
   }
 }
 

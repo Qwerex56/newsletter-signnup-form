@@ -1,8 +1,9 @@
-import Image from 'next/image';
-
 import BenefitCardStyle from './BenefitCardStyle.module.scss';
 import { IBenefitCard } from './IBenefitCard';
+
 import IconList from '@/app/assets/icon-list.svg';
+
+import Image from 'next/image';
 
 export default function BenefitCard(props: IBenefitCard) {
   return (

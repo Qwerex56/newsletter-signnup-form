@@ -11,7 +11,10 @@
 
 html, body {
   height: 100vh;
-  overflow: auto;
+  overflow: visible;
+
+  display: flex;
+  justify-content: center;
 
   background-color: $charcoal-gray;
 }

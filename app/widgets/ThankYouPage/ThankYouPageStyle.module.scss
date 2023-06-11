@@ -1,0 +1,32 @@
+.thankYouPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  height: max-content;
+  overflow: visible;
+
+  padding: 0rem 1.5rem;
+  padding-top: 9.375rem;
+  padding-bottom: 2.5rem;
+
+  background-color: $white;
+
+  &__greetings {
+    margin-bottom: 40px;
+    &__succesIcon {
+      width: 4rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  @media screen and (min-width: 425px) {
+    height: auto;
+    max-width: 32.5rem;
+
+    padding: 3rem 4rem 4rem 4rem;
+    margin: auto;
+
+    border-radius: 2.25rem;
+  }
+}
