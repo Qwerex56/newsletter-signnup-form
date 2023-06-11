@@ -30,10 +30,12 @@ export default function NewsletterForm() {
     if (!userEmail.includes('@')) return false;
   
     const atIndex = userEmail.indexOf('@');
-    const firstPart = userEmail.substring(0, atIndex);
-  
-    if (!isAscii(firstPart)) return false;
-  
+    const local = userEmail.substring(0, atIndex);
+    const domain = userEmail.substring(atIndex, userEmail.length - 1);
+
+    if (!isAscii(local)) return false;
+    if (domain.length <= 0) return false;
+
     return true;
   }
 
