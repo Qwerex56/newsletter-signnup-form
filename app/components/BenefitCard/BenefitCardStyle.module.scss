@@ -1,0 +1,17 @@
+.benefitCard {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: flex-start;
+  gap: 1rem;
+
+  &__iconList {
+    width: 1.3125rem;
+  }
+
+  &__description {
+    color: $dark-slate-gray;
+
+    font-weight: 400;
+  }
+}

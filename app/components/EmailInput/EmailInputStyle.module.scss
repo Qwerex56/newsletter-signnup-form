@@ -1,0 +1,66 @@
+.emailInput {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 0.5rem;
+
+    &__title {
+      font-size: .75rem;
+      font-weight: 700;
+    }
+
+    &__error {
+      color: $tomato;
+
+      font-size: .75rem;
+
+      font-weight: 700;
+    }
+  }
+
+  &__input {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    width: 100%;
+
+    outline: none;
+    border: .0625rem solid $gray;
+    border-radius: .5rem;
+  
+    color: $dark-slate-gray;
+
+    font-size: 1rem;
+    font-weight: 400;
+
+    line-height: 3.375rem;
+    text-indent: 1.5rem;
+
+    transition: .2s;
+
+    &:hover, &:focus {
+      border-color: $dark-slate-gray;
+
+      color: $dark-slate-gray;
+    }
+
+    &::placeholder {
+      color: $gray;
+    }
+  }
+
+  &.error {
+    .emailInput__input {
+      background-color: transparentize($tomato, $amount: 0.85);
+      color: $tomato;
+
+      border: 1px solid $tomato;
+
+      &::placeholder {
+        color: $tomato;
+      }
+    }
+  }
+}

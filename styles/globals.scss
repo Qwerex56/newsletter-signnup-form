@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: $roboto;
+}
+
+html, body {
+  height: 100vh;
+  overflow: visible;
+
+  display: flex;
+  justify-content: center;
+
+  background-color: $charcoal-gray;
+}

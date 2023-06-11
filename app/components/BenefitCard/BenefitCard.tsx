@@ -1,17 +1,15 @@
-import Image from 'next/image';
-
 import BenefitCardStyle from './BenefitCardStyle.module.scss';
+import { IBenefitCard } from './IBenefitCard';
+
 import IconList from '@/app/assets/icon-list.svg';
 
-interface IProps {
-  description: string;
-}
+import Image from 'next/image';
 
-export default function BenefitCard(props: IProps) {
+export default function BenefitCard(props: IBenefitCard) {
   return (
     <div className={BenefitCardStyle.benefitCard}>
       <Image src={IconList} alt='Icon List' className={BenefitCardStyle.benefitCard__iconList} />
-      <p className={BenefitCardStyle.benefitCard__description}>{props.description}</p>
+      <p className={BenefitCardStyle.benefitCard__description}>{props.children}</p>
     </div>
   )
 }
