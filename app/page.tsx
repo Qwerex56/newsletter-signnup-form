@@ -6,6 +6,8 @@ import ThankYouPage from './widgets/ThankYouPage/ThankYouPage';
 
 export default function Home() {
   return (
-    <></>
+    <>
+      <NewsletterForm />
+    </>
   )
 }
